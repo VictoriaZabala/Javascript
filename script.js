@@ -1,19 +1,15 @@
-let mayorDeEdad = Number(prompt("Ingrese su edad:"))
+let i = 0
 
-while (mayorDeEdad <= 100) {
-	
+while (i<=31){
+	i++;
 
-	if (mayorDeEdad >= 18) {
-	console.log("Sos mayor de edad, podés ingresar.")
-	break;
+	if(i%2 == 0){
+		console.log(`El día ${i} es un número par :)`)
 	}
-
 	else {
-	console.log("Sos menor de edad, no podés ingresar.") 
-	break; }
-
+		console.log(`El día ${i} es un número impar :)`)
+	}
 }
-
 
 
 
