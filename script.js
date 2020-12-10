@@ -1,15 +1,55 @@
-let i = 0
+let precio = Number(prompt("Ingrese el precio del producto que desea comprar: "));
 
-while (i<=31){
-	i++;
+let cuotas = Number(prompt("Ingrese el número de cuotas en las que quiera pagar: "));
 
-	if(i%2 == 0){
-		console.log(`El día ${i} es un número par :)`)
-	}
-	else {
-		console.log(`El día ${i} es un número impar :)`)
-	}
+function calculoCuotas(precio, cuotas) {
+	return (precio/cuotas);
 }
+
+switch(cuotas) {
+default:
+	alert(`Ingresó un número incorrecto, por favor, intente nuevamente`)
+	break;
+case 1:
+	alert(`Su cuota quedaría en $${precio}`)
+	break;
+case 3:
+	alert(`Las 3 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
+case 6:
+	alert(`Las 6 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
+	break;
+case 12:
+	alert(`Las 12 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
+	break;
+case 18:
+	alert(`Las 18 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
+	break;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CLASE 3 let i = 0
+
+// while (i<=31){
+// 	i++;
+
+// 	if(i%2 == 0){
+// 		console.log(`El día ${i} es un número par :)`)
+// 	}
+// 	else {
+// 		console.log(`El día ${i} es un número impar :)`)
+// 	}
+// }
 
 
 
