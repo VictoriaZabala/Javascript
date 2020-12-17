@@ -1,0 +1,42 @@
+.productos {
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap; }
+
+.productos div {
+  display: inline-block;
+  margin: auto; }
+
+.tarjeta {
+  display: flex;
+  padding: 0.5em; }
+
+.tarjeta h5 {
+  font-family: "Poiret One", cursive;
+  font-weight: bold; }
+
+.tarjeta div {
+  border: 1px solid black; }
+
+.imagen__producto img {
+  object-fit: cover; }
+
+h5, h6 {
+  text-align: center; }
+
+.tarjeta:hover {
+  animation-duration: 1s;
+  animation-name: compra;
+  animation-fill-mode: forwards; }
+
+@keyframes compra {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.2; } }
+
+@keyframes compra {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.2; } }
