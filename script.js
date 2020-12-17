@@ -1,30 +1,57 @@
-let precio = Number(prompt("Ingrese el precio del producto que desea comprar: "));
-
-let cuotas = Number(prompt("Ingrese el número de cuotas en las que quiera pagar: "));
-
-function calculoCuotas(precio, cuotas) {
-	return (precio/cuotas);
+function Producto(nombre,material,peso,colorPrincipal) {
+	this.nombre = nombre;
+	this.material = material;
+	this. peso = peso;
+	this.colorPrincipal = colorPrincipal;
 }
 
-switch(cuotas) {
-default:
-	alert(`Ingresó un número incorrecto, por favor, intente nuevamente`)
-	break;
-case 1:
-	alert(`Su cuota quedaría en $${precio}`)
-	break;
-case 3:
-	alert(`Las 3 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
-case 6:
-	alert(`Las 6 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
-	break;
-case 12:
-	alert(`Las 12 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
-	break;
-case 18:
-	alert(`Las 18 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
-	break;
+if (confirm("Quiere ver la información detallada de los productos?")) {
+
+const platoIrregular = new Producto("Plato Irregular","Cerámica","200gr","Celeste");
+console.log(platoIrregular);
+
+const bebedero = new Producto("Bebedero para perros y gatos","Cerámica","500gr","Gris");
+console.log(bebedero);
+
+const maceta = new Producto("Maceta Colgante","Cerámica","300gr","Blanco");
+console.log(maceta);
 }
+
+else {
+	console.log("Muchas gracias por visitar nuestra tienda!")
+}
+
+
+
+
+
+// Clase 4 let precio = Number(prompt("Ingrese el precio del producto que desea comprar: "));
+
+// let cuotas = Number(prompt("Ingrese el número de cuotas en las que quiera pagar: "));
+
+// function calculoCuotas(precio, cuotas) {
+// 	return (precio/cuotas);
+// }
+
+// switch(cuotas) {
+// default:
+// 	alert(`Ingresó un número incorrecto, por favor, intente nuevamente`)
+// 	break;
+// case 1:
+// 	alert(`Su cuota quedaría en $${precio}`)
+// 	break;
+// case 3:
+// 	alert(`Las 3 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
+// case 6:
+// 	alert(`Las 6 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
+// 	break;
+// case 12:
+// 	alert(`Las 12 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
+// 	break;
+// case 18:
+// 	alert(`Las 18 cuotas quedarìan en $${calculoCuotas(precio, cuotas)} cada una.`)
+// 	break;
+// }
 
 
 
