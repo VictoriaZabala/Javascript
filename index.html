@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Javascript</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
 </head>
 <body>
 
@@ -13,30 +15,51 @@
 	
 	<section class="productos">
 
-  <div class="tarjeta">
+  <div id="tar" class="tarjeta">
     <div class="imagen__producto">
      <img src="imagenes/prod1.jpg" width="300px" height="400px">
      <h5>Plato irregular</h5>
      <h6>$500</h6>
+     <a href= "#" class="btn btn-block btn-primary agregar_carrito" data-id="1"> Comprar </a>
      </div>
     </div>
 
-    <div class="tarjeta"> 
+    <div id="tar" class="tarjeta"> 
       <div class="imagen__producto">
       <img src="imagenes/prod2.jpg" width="300px" height="400px">
       <h5>Bebedero para Perros o Gatos</h5>
       <h6>$1000</h6>
+      <a href= "#" class="btn btn-block btn-primary agregar_carrito" data-id="2"> Comprar </a>
      </div>
     </div>
 
-    <div class="tarjeta">
+    <div id="tar" class="tarjeta">
      <div class="imagen__producto">
       <img src="imagenes/prod3.jpg" width="300px" height="400px">
       <h5>Macetas Colgantes</h5>
       <h6>$750</h6>
+      <a href= "#" class="btn btn-block btn-primary agregar_carrito" data-id="3"> Comprar </a>
      </div>
     </div>
 </section>
+
+<div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+   <table id="lista-carrito" class="table">
+       <thead>
+     <tr>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th></th>
+    </tr>
+        </thead>
+      <tbody></tbody>
+   </table>
+
+   <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+   <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar Compra</a>
+</div>
 
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
