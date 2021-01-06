@@ -1,10 +1,26 @@
 let comprar = document.querySelector('.btn btn-block btn-primary agregar_carrito'); 
 let carrito = document.querySelector('#carrito');
-let productos = document.querySelector('.producto');
+let productos = document.querySelector('.tarjeta');
 let listaProductos = document.querySelector('#lista-carrito tbody')
-const carro = new Carrito();
+
 // let articulosCarrito = []
 // const {imagen, nombre, precio, cantidad, id} = producto;
+
+
+ // CARRITOOOOOOOOOOOOOO
+
+class Carrito{
+	comprarProducto(e) {
+	e.preventDefault();
+	if(e.target.classList.contains('agregar_carrito')) {
+		let producto = e.target.parentElement.parentElement;
+		// this.obtenerDatos(producto)
+		console.log(producto);
+	}
+}
+}
+
+const carro = new Carrito();
 
 function cargarEventos() {
 	productos.addEventListener('click', (e) => {carro.comprarProducto(e)} );
@@ -27,12 +43,6 @@ cargarEventos();
  insertarCarritoHTML();
 }
 
-
-
- // CARRITOOOOOOOOOOOOOO
-
-
-
 function agregarProducto(e) {
 	e.preventDefault();
 	if(e.target.classList.contains('btn btn-block btn-primary agregar_carrito')){
@@ -41,6 +51,7 @@ function agregarProducto(e) {
 		console.log(producto);
 	}
 }
+
 
 
 //  function insertarCarritoHTML() {
