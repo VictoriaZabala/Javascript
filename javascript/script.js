@@ -1,6 +1,6 @@
 let comprar = document.querySelector('.btn btn-block btn-primary agregar_carrito'); 
 let carrito = document.querySelector('#carrito');
-let productos = document.querySelector('.tarjeta');
+let producto = document.querySelector('.tarjeta');
 let listaProductos = document.querySelector('#lista-carrito tbody')
 
  // CARRITOOOOOOOOOOOOOO
@@ -25,7 +25,7 @@ class Carrito{
 		this.insertarCarrito(productoAgregado);
 	}
 
-	insertarCarrito() {
+	insertarCarrito(producto) {
 		articulosCarrito.forEach(producto => {
  		
  		const row = document.createElement('tr');
