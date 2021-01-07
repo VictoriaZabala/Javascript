@@ -26,7 +26,7 @@ class Carrito{
 	}
 
 	insertarCarrito() {
-		articulosCarrito.forEach( producto => {
+		articulosCarrito.forEach(producto => {
  		
  		const row = document.createElement('tr');
  		row.innerHTML = `
@@ -52,7 +52,7 @@ class Carrito{
 
  		`
  		listaProductos.appendChild(row);
- 	})
+ 	});
 
 
 function cargarEventos() {

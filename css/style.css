@@ -1,5 +1,5 @@
 .productos {
-  padding: 2em;
+  padding: 1em;
   display: flex;
   flex-wrap: wrap; }
 
@@ -24,19 +24,13 @@
 h5, h6 {
   text-align: center; }
 
-.tarjeta:hover {
-  animation-duration: 1s;
-  animation-name: compra;
-  animation-fill-mode: forwards; }
 
-@keyframes compra {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 0.2; } }
 
-@keyframes compra {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 0.2; } }
+#carrito {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: right;
+}
+.dropdown-menu {
+    position: relative;
+    top: 2em;
