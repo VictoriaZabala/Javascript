@@ -1,19 +1,26 @@
-/* Selectores */
-const carrito = document.querySelector('#carrito');
+// const carrito = document.querySelector('#carrito');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
-const listaProductos = document.querySelector('#lista-productos');
 const btnVaciarCarrito = document.querySelector('#vaciar-carrito')
-
+// const listaProductos = document.querySelector('#lista-productos');
 let articulosCarrito = [];
 
+
+
 /* Listeners */
-listaProductos.addEventListener('click', agregarProducto);
+// listaProductos.addEventListener('click', agregarProducto);
+$('#lista-productos').on('click', agregarProducto);
+
+
 document.addEventListener('DOMContentLoaded', () => {
 	articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [] ;
 	insertarCarritoHTML();
 });
 
-carrito.addEventListener('click', quitarProducto);
+
+// carrito.addEventListener('click', quitarProducto);
+$('#carrito').on('click', quitarProducto);
+
+
 btnVaciarCarrito.addEventListener('click', vaciarCarrito)
 /* Funciones */
 function vaciarCarrito(){
