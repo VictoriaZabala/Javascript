@@ -147,5 +147,9 @@ ul {
 .info-card .precio span {
     font-weight: 700;
     font-size: 22px;
-
 }
+
+#mapid { 
+height: 300px;
+padding-top:100px ;
+ }

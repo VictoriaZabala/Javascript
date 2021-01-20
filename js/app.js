@@ -53,6 +53,7 @@ function agregarProducto(e) {
 		const productoSeleccionado = e.target.parentElement.parentElement;
 
 		obtenerDatos(productoSeleccionado);
+
 	}
 }
 
@@ -135,3 +136,15 @@ function limpiarCarrito() {
 		contenedorCarrito.removeChild(contenedorCarrito.firstChild);
 	}
 }
+
+
+var map = L.map('mapid').setView([-31.3292, -64.4908], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+
+L.marker([-31.3292, -64.4908]).addTo(map)
+    .bindPopup('Pawttery<br> Bialet Massé, Córdoba')
+    .openPopup();
