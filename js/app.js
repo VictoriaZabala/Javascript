@@ -1,28 +1,82 @@
-// const carrito = document.querySelector('#carrito');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const btnVaciarCarrito = document.querySelector('#vaciar-carrito')
-// const listaProductos = document.querySelector('#lista-productos');
 let articulosCarrito = [];
+let stockProductos;
 
 
 
-/* Listeners */
-// listaProductos.addEventListener('click', agregarProducto);
-$('#lista-productos').on('click', agregarProducto);
+/*--------------Listeners--------------- */
 
+	document.addEventListener('DOMContentLoaded', () => {
+	$.ajax({
+		url: 'js/productos.json',
+		success: function (data, status, xhr) {
+			stockProductos = data;
+			cargarListaProductos(data);
+	},
+		error: function (xhr, status, errorThrown) {
+			console.log(xhr)
+			console.log(status)
+			console.log(errorThrown)
+	}
+		});
 
-document.addEventListener('DOMContentLoaded', () => {
 	articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [] ;
+
 	insertarCarritoHTML();
-});
+
+	});
 
 
-// carrito.addEventListener('click', quitarProducto);
-$('#carrito').on('click', quitarProducto);
+	$('#carrito').on('click', quitarProducto);
+
+	$('#lista-productos').on('click', agregarProducto);
+
+	btnVaciarCarrito.addEventListener('click', vaciarCarrito)
 
 
-btnVaciarCarrito.addEventListener('click', vaciarCarrito)
-/* Funciones */
+
+
+
+/*------------Funciones------------- */
+function cargarListaProductos(productos) {
+	$('#lista-productos').hide();
+	productos.forEach((producto, index) => {
+
+		const { nombre, imagen, precio, id } = producto;
+
+		const divCard = document.createElement('div');
+		divCard.classList.add('four', 'columns');
+		divCard.innerHTML = `
+			<div id="lista-productos" class="container">
+			<div class="row">
+			<div class="four columns">
+				<div class="card">
+					<img src="${imagen}"" class="imagen-producto u-full-width">
+					<div class="info-card">
+						<h4>${nombre}</h4>
+						<p class="precio">${precio}</p>
+						<a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+					</div>
+				</div>
+		`
+		if (index % 3 === 0) {
+			const row = document.createElement('div');
+			row.classList.add('row');
+
+			listaProductos.appendChild(row);
+			row.appendChild(divCard);
+		} else {
+			const row = document.querySelector('#lista-productos .row:last-child');
+			row.appendChild(divCard);
+		}
+	})
+
+	$('#lista-productos').slideDown(1000)
+	}
+
+
+
 function vaciarCarrito(){
 	limpiarCarrito();
 	articulosCarrito = [];
@@ -34,7 +88,7 @@ function quitarProducto(e) {
 		let productoId = e.target.getAttribute('data-id');
 
 		articulosCarrito = articulosCarrito.filter( producto => producto.id != productoId );
-		//Renderizar el nuevo carrito :)
+		//Renderizar el nuevo carrito
 		insertarCarritoHTML();
 		//Actualizar storage
 		guardarStorage();
@@ -42,14 +96,12 @@ function quitarProducto(e) {
 }
 
 
-
-
 function agregarProducto(e) {
-	/* Evitamos la accion por defecto del enlace */
+	/*prevenir acción por default del enlace*/
 	e.preventDefault();
 
 	if (e.target.classList.contains('agregar-carrito')) {
-		/* Seleccionar el card del producto */
+		/*seleccionar el card del producto*/
 		const productoSeleccionado = e.target.parentElement.parentElement;
 
 		obtenerDatos(productoSeleccionado);
@@ -137,14 +189,14 @@ function limpiarCarrito() {
 	}
 }
 
+//---------Mapa---------- //
+	var map = L.map('mapid').setView([-31.3292, -64.4908], 13);
 
-var map = L.map('mapid').setView([-31.3292, -64.4908], 13);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+		}).addTo(map);
 
 
-L.marker([-31.3292, -64.4908]).addTo(map)
+	L.marker([-31.3292, -64.4908]).addTo(map)
     .bindPopup('Pawttery<br> Bialet Massé, Córdoba')
     .openPopup();
