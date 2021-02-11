@@ -53,11 +53,11 @@ function cargarListaProductos(productos) {
 			<div class="row">
 			<div class="four columns">
 				<div class="card">
-					<img src="${imagen}"" class="imagen-producto u-full-width">
+					<img src="${imagen}" class="imagen-producto u-full-width">
 					<div class="info-card">
 						<h4>${nombre}</h4>
 						<p class="precio">${precio}</p>
-						<a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+						<a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="${id}">Agregar Al Carrito</a>
 					</div>
 				</div>
 		`
