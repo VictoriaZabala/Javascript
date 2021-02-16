@@ -1,40 +1,70 @@
-html {
-    font-size: 62.5%;
+tr {
+   padding: 1em;
+   font-family: "Poiret One", cursive;
+   border-bottom: 1px solid black;
+   text-align: center;
 }
-body {
-    background-color: #f5f3f3
+th {
+   padding: 1em;
+   font-family: "Poiret One", cursive;
+   border-bottom: 1px solid black;
+   display: wrap;
+   text-align: center;
 }
-h1 {
+
+#vaciar-carrito {
+    text-decoration: none;
+    color: red;
+    font-family: "Poiret One", cursive;
+    font-weight: bolder;
+}
+
+#finalizar-compra {
+    text-decoration: none;
+    color: #6ae981;
+    font-family: "Poiret One", cursive;
+    font-weight: bolder;
+    font-size: 2em;
+    padding-right: 3em;
+}
+
+#finalizar-compra:hover {
+    text-decoration: none;
+    color: #093;
+}
+
+#header {
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: .5em;
+    background: #e9ceb3;
     text-align: center;
-    font-family: "Poiret One", cursive;
+    width: 100%;   
 }
-h2 {
-    font-size: 3rem;
-    font-family: "Poiret One", cursive;
-}
-h4 {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: "Poiret One", cursive;
-    letter-spacing: .9px;
-}
-header {
-    padding: 20px 0 0 0;
-    background: white;
-    text-align: center;
-}
+
+
 @media (min-width: 750px) {
-    header {
-        text-align: left;
+    #header {
+        text-align: right;
     }
 }
+
 .borrar-producto {
-    background-color: red;
-    border-radius: 50%;
-    padding: 5px 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 90%;
+    background-color: #e9ceb3;
+    padding-left: .4em;
+    padding-right: .4em;
+    padding-bottom: .3em;
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-weight: bolder;
+}
+
+.borrar-producto:hover {
+    color: black;
+    text-decoration: none;
 }
 
 ul {
@@ -53,16 +83,21 @@ ul {
 }
 .submenu {
     position: relative;
+
 }
 
 .submenu #carrito{
     display: none;
 }
+
 .submenu:hover #carrito{
+    box-shadow: 3px 4px 3px 3px grey;
+    border-radius: 5px;
+    transition: .2s all;
     display: block;
     position: absolute;
     right:0;
-
+    border: 1px dashed black;
     top:100%;
     z-index: 1;
     background-color: white;
@@ -91,65 +126,3 @@ ul {
     margin:0;
     color: white;
 }
-.icono {
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 60px;
-    background-size: 30px;
-    margin-bottom: 40px;
-    text-align: center;
-}
-@media (min-width: 750px) {
-    .icono {
-        margin-bottom:0;
-    }
-}
-.icono1 {
-    background-image: url(../img/icono1.png);
-}
-.icono2 {
-    background-image: url(../img/icono2.png);
-}
-.icono3 {
-    background-image: url(../img/icono3.png);
-}
-
-#lista-productos .row {
-    margin-bottom:20px;
-}
-.agregar-carrito {
-    margin:10px 0;
-}
-
-.card {
-    text-align: center;
-    border: 1px solid #e1e1e1;
-    background: white;
-}
-@media (min-width: 550px) {
-    .card {
-        text-align: left;
-    }
-}
-.info-card  {
-    padding: 10px 20px;
-}
-
-.info-card p, 
-.card h4 {
-    margin-bottom: 5px;
-}
-.info-card .precio {
-    text-decoration: none;
-    font-size: 18px;
-    margin-top: 10px;
-}
-.info-card .precio span {
-    font-weight: 700;
-    font-size: 22px;
-}
-
-#mapid { 
-height: 300px;
-padding-top:100px ;
- }

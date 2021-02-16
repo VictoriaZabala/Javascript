@@ -1,48 +1,48 @@
 [
    {
-      "imagen":"img/prod1.jpg",
+      "imagen":"imagenes/prod1.jpg",
       "nombre":"Plato irregular",
       "precio":"$700",
       "id":1
    },
    {
-      "imagen":"img/prod2.jpg",
+      "imagen":"imagenes/prod2.jpg",
       "nombre":"Bebedero para Perros o Gatos",
       "precio":"$1200",
       "id":2
    },
    {
-      "imagen":"img/prod3.jpg",
+      "imagen":"imagenes/prod3.jpg",
       "nombre":"Maceta Colgante",
       "precio":"$750",
       "id":3
    },
    {
-      "imagen":"img/prod4.jpg",
+      "imagen":"imagenes/prod4.jpg",
       "nombre":"Taza Puntitos",
       "precio":"$600",
       "id":4
    },
    {
-      "imagen":"img/prod5.jpg",
+      "imagen":"imagenes/prod5.jpg",
       "nombre":"Florero Animales",
       "precio":"$1200",
       "id":5
    },
    {
-      "imagen":"img/prod6.jpg",
+      "imagen":"imagenes/prod6.jpg",
       "nombre":"Adorno Cactus",
       "precio":"$600",
       "id":6
    },
    {
-      "imagen":"img/prod7.jpg",
+      "imagen":"imagenes/prod7.jpg",
       "nombre":"Plato Amatista",
       "precio":"$700",
       "id":7
    },
    {
-      "imagen":"img/prod8.jpg",
+      "imagen":"imagenes/prod8.jpg",
       "nombre":"Set café irregular",
       "precio":"$1500",
       "id":8
